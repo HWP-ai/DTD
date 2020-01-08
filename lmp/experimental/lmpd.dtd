@@ -1,0 +1,436 @@
+<!--
+
+    ==================================================
+    -w- The Laboratory Message Protocol Data DTD  -w- 
+    ==================================================
+
+-->
+
+<!--
+
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    -*- define on lab name -*-
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-->
+
+<!ELEMENT full (#PCDATA)>
+
+<!ATTLIST full
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ELEMENT short (#PCDATA)>
+
+<!ATTLIST short
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ELEMENT name (full|short)* >
+
+<!ATTLIST name
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!--
+
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    -*- define on lab fund -*-
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-->
+
+<!ELEMENT national (#PCDATA) >
+<!ELEMENT company (#PCDATA) >
+<!ELEMENT non-profit (#PCDATA) >
+<!ELEMENT person (#PCDATA) >
+
+<!ATTLIST national
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ATTLIST company
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ATTLIST non-profit
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ATTLIST person
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ENTITY % fund_subject
+  "national|company|non-profit|person"
+  >
+
+<!ELEMENT giver-quote (#PCDATA) >
+
+<!ATTLIST giver-quote
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ENTITY % fund_quote
+  "giver-quote"
+  >
+
+<!ELEMENT fund (%fund_subject; | %fund_quote; )* >
+
+<!ATTLIST fund
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!--
+
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    -*- define on lab platform -*-
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-->
+
+<!ELEMENT account (#PCDATA) >
+<!ELEMENT member-account (#PCDATA) >
+
+<!ATTLIST account
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ATTLIST member-account
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ELEMENT perference (#PCDATA) >
+
+<!ATTLIST perference
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ELEMENT platform (account|member-account|perference)* >
+
+<!ATTLIST platform
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!--
+
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    -*- define on lab corresponding -*-
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-->
+
+<!ELEMENT president (#PCDATA) >
+<!ELEMENT theory (#PCDATA) >
+<!ELEMENT visit (#PCDATA) >
+<!ELEMENT donate (#PCDATA) >
+
+<!ATTLIST president
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  form       CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ATTLIST theory
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  form       CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ATTLIST visit
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  form       CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ATTLIST donate
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  form       CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ELEMENT corresponding (president|theory|visit|donate)* >
+
+<!ATTLIST corresponding
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!--
+
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    -*- define on lab domain -*-
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-->
+
+<!ELEMENT c1 (#PCDATA) >
+<!ELEMENT c2 (#PCDATA) >
+<!ELEMENT c3 (#PCDATA) >
+<!ELEMENT c4 (#PCDATA) >
+<!ELEMENT c5 (#PCDATA) >
+
+<!ATTLIST c1
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ATTLIST c2
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ATTLIST c3
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ATTLIST c4
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ATTLIST c5
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ELEMENT corresponding (c1|c2|c3|c4|c5)* >
+
+<!ATTLIST corresponding
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!--
+
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    -*- define on lab action -*-
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-->
+
+<!ELEMENT datetime (#PCDATA) >
+
+<!ATTLIST datetime
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ELEMENT theme (#PCDATA) >
+
+<!ATTLIST theme
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ELEMENT constant (#PCDATA) >
+
+<!ATTLIST constant
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ELEMENT action (datetime|theme|constant)* >
+
+<!ATTLIST action
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!--
+
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    -*- define on lab friend -*-
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-->
+
+<!ELEMENT asia (#PCDATA) >
+
+<!ATTLIST asia
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ELEMENT europe (#PCDATA) >
+
+<!ATTLIST europe
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ELEMENT north-america (#PCDATA) >
+
+<!ATTLIST north-america
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ELEMENT south-america (#PCDATA) >
+
+<!ATTLIST south-america
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ELEMENT africa (#PCDATA) >
+
+<!ATTLIST africa
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ELEMENT oceania (#PCDATA) >
+
+<!ATTLIST oceania
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ELEMENT antarctica (#PCDATA) >
+
+<!ATTLIST antarctica
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ELEMENT friend (asia|europe|north-america|south-america|africa|ocenia|antarctica)*>
+
+<!ATTLIST friend
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  display    CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!--
+
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    -*- define on lab commercial -*-
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-->
+
+<!ELEMENT official (#PCDATA) >
+<!ELEMENT advertisement (#PCDATA) >
+
+<!ATTLIST official
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ATTLIST advertisement
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  table      CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!ELEMENT commercial (offical|advertisement)* >
+
+<!ATTLIST commercial
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
+<!--=============== the lmpd node  ==================-->
+
+<!ELEMENT lmpd (name|fund|platform|corresponding|domain|action|friend|commercial)* >
+
+<!ATTLIST lmpd
+  category   CDATA   #IMPLIED
+  reason     CDATA   #IMPLIED
+  keying     CDATA   #IMPLIED
+  id         ID      #IMPLIED
+  >
+
